@@ -1,0 +1,35 @@
+{
+    "manifest_version": 1,
+    "version": 1,
+    "type": "APP",
+    "name": { 
+        "ja": "フィールド情報出力プラグイン",
+        "en": "FieldgetPlugin",
+        "zh": "插件的例子"
+    },
+    "description": { 
+        "ja": "各アプリに設定されているフィールド情報を出力します",
+        "en": "This is sample plugin.",
+        "zh": "这是插件的例子"
+    },
+    "icon": "image/icon.png",
+    "homepage_url": {
+        "ja": "https://example.com/jp/",
+        "en": "https://example.com/en-us/",
+        "zh": "https://example.com/cn/"
+    },
+    "config": {
+        "html": "html/config.html",
+        "js": [
+            "https://js.cybozu.com/jquery/3.6.0/jquery.min.js",
+            "https://js.cybozu.com/sweetalert2/v11.0.18/sweetalert2.min.js",
+            "https://js.cybozu.com/spinjs/2.3.2/spin.min.js",
+            "js/config.js"
+        ],
+        "css": [
+            "https://js.cybozu.com/sweetalert2/v11.0.18/sweetalert2.min.css",
+            "css/51-modern-default.css",
+            "css/config.css"
+        ]
+    }
+}

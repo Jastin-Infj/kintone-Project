@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="kintoneplugin-row" id="Contents">
+            <input type="radio" name="tab_item" id="Field-list"  checked>
+            <label class="tab_item" for="Field-list">フィールド一覧</label>
+            <input type="radio" name="tab_item" id="Plugin-settings">
+            <label class="tab_item" for="Plugin-settings">プラグイン設定</label>
+            <div class="kintoneplugin-row tab_Contents" id="Mode-Setting">
+                <div class="kintoneplugin-title">
+                    <span id="kintoneList">kintone一覧として自動追加する</span>
+                    <div class="switchArea_new">
+                        <input type="checkbox" id="kintoneListCheck">
+                        <label for="kintoneListCheck"></label>
+                        <div class="swImg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="kintoneplugin-row tab_Contents" id="Mode-Output">
+                <div class="kintoneplugin-row" id="Outputbuttons">
+                    <div class="kintoneplugin-dropdown-outer" id="Category">
+                        <div class="kintoneplugin-select">
+                            <select id="Fieldmode">
+                                <option value="1">通常フィールド</option>
+                                <option value="2">サブテーブル</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="kintoneplugin-button-normal" id="csvoutput">CSVファイル出力</button>
+                    <button class="kintoneplugin-button-normal" id="csvoutput_shiftJis">CSVファイル出力(Shift-JIS)</button>
+                    <button class="kintoneplugin-button-normal" id="Allfield">全フィールド選択</button>
+                </div>
+                <div class="kintoneplugin-row" id="OutputSetting">
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="Fieldname" id="FieldName">
+                            <label for="FieldName">フィールド名</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="FieldCode" id="FieldCode">
+                            <label for="FieldCode">フィールドコード</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="FieldType" id="FieldType">
+                            <label for="FieldType">フィールドタイプ</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="Mandatory" id="Mandatory">
+                            <label for="Mandatory">必須可否</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="Duplicate" id="Duplicate">
+                            <label for="Duplicate">重複可否</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="ValueLimit" id="ValueLimit">
+                            <label for="ValueLimit">値の制限(MAX)</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox Line">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="CharacterLimitMax" id="CharacterLimitMax">
+                            <label for="CharacterLimitMax">文字数の制限(MAX)</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="CharacterLimitMin" id="CharacterLimitMin">
+                            <label for="CharacterLimitMin">文字数の制限(MIN)</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="InitialValue" id="InitialValue">
+                            <label for="InitialValue">初期値</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="InitialFormula" id="InitialFormula">
+                            <label for="InitialFormula">初期値の式</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="Choices" id="Choices">
+                            <label for="Choices">選択項目</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="SortSelection" id="SortSelection">
+                            <label for="SortSelection">選択肢の並び</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox Line">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="AutomaticCalculation" id="AutomaticCalculation">
+                            <label for="AutomaticCalculation">自動計算</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="NumberSeparator" id="NumberSeparator">
+                            <label for="NumberSeparator">数値の桁区切り</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="Kinds(Link)"" id="Kinds(Link)">
+                            <label for="Kinds(Link)">種類(リンク)</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="DisplayFormat" id="DisplayFormat">
+                            <label for="DisplayFormat">表示形式</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="DecimalPointDisplayDigit" id="DecimalPointDisplayDigit">
+                            <label for="DecimalPointDisplayDigit">小数点以下の表示桁数</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="HideCalculation" id="HideCalculation">
+                            <label for="HideCalculation">計算式の非表示</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="LookupRelatedRecords" id="LookupRelatedRecords">
+                            <label for="LookupRelatedRecords">ルックアップ・関連レコードID</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="UnitSymbol" id="UnitSymbol">
+                            <label for="UnitSymbol">単位記号</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox Line">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="PositionOfUnitSymbol" id="PositionOfUnitSymbol">
+                            <label for="PositionOfUnitSymbol">単位記号の位置</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="Feature enabled/disabled" id="Feature enabled/disabled">
+                            <label for="Feature enabled/disabled">機能の有効/無効</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="FieldsWithin a group" id="FieldsWithin a group">
+                            <label for="FieldsWithin a group">グループ内フィールドの実装</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="Record registration date and time" id="Record registration date and time">
+                            <label for="Record registration date and time">レコード登録日時を初期化</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="Users" id="Users">
+                            <label for="Users">選択肢のユーザー/組織/グループ</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="LookupSettings" id="LookupSettings">
+                            <label for="LookupSettings">ルックアップの設定</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="RelatedRecordSettings" id="RelatedRecordSettings">
+                            <label for="RelatedRecordSettings">関連レコードの設定</label>
+                        </span>
+                    </div>
+                    <div class="kintoneplugin-input-checkbox">
+                        <span class="kintoneplugin-input-checkbox-item">
+                            <input type="checkbox" name="checkbox" value="ImageThumbnailSize" id="ImageThumbnailSize">
+                            <label for="ImageThumbnailSize">画像サムネイルサイズ</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+/* kintone専用 プラグイン画面body */
+div.ocean-page-market-app-html {
+  height: 40em;
+}
+/*------------------------------------------------------------*/
+
+/* 設定タブ 本体 */
+div#Contents {
+  padding-bottom: 20px;
+}
+/* 設定タブ > タブ本体(ラベル) */
+div#Contents > label.tab_item {
+  width: calc(100% / 2);
+  border-bottom: 3px solid #5ab4bd;
+  background-color: #d9d9d9;
+  line-height: 50px;
+  margin-bottom: 2em;
+  text-align: center;
+  color: #565656;
+  float: left;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+/* 設定タブ > タブ本体(ラジオボタン)*/
+div#Contents > input[name="tab_item"] {
+  display: none;
+}
+/* 設定タブ > 選択時のラベル*/
+div#Contents > input:checked + label.tab_item {
+  background-color: #5ab4bd;
+  color: #fff;
+}
+/* 設定タブ > タブ本体(マウスが重なる時) */
+div#Contents > label.tab_item:hover {
+  opacity: 0.6;
+}
+/*------------------------------------------------------------*/
+
+/* 各コンテンツ */
+div.tab_Contents {
+  display: none;
+  clear: both;
+  margin-top: 2em;
+}
+/* 各コンテンツ > 各コンテンツ本体表示 */
+input#Field-list:checked ~ div#Mode-Output,
+input#Plugin-settings:checked ~ div#Mode-Setting {
+  display: block;
+}
+
+/*------------------------------------------------------------*/
+
+/* プラグイン設定*/
+div#Mode-Setting {
+  height: 2em;
+}
+/* プラグイン設定 > kitnone一覧設定 */
+span#kintoneList {
+  float: left;
+  margin-right: 30px;
+}
+/* プラグイン設定 > kintone一覧設定 チェックボックス非表示 */
+div.switchArea_new > input[type="checkbox"] {
+  display: none;
+}
+/* プラグイン設定 > kintone一覧設定 ラベル */
+div.switchArea_new > label {
+  box-sizing: border-box; /* 枠線を含んだサイズ */
+  height: 60px; /* ボタンの高さ       */
+  border: 2px solid #999999; /* 未選択タブのの枠線 */
+  border-radius: 30px; /* 角丸               */
+}
+/*プラグイン設定 > kintone一覧設定 ONのとき */
+div.switchArea_new > input[type="checkbox"]:checked + label {
+  border-color: #78bd78; /* 選択タブの枠線     */
+}
+/* プラグイン設定 > kintone一覧設定 ラベル表示*/
+div.switchArea_new > label:after {
+  content: "OFF"; /* 表示する文字       */
+  color: #999999; /* 文字色             */
+  padding: 0em 1.5em 0em 1.5em;
+}
+/* プラグイン設定 > kintone一覧設定 ラベル表示 ONのとき*/
+div.switchArea_new > input[type="checkbox"]:checked + label:after {
+  content: "ON"; /* 表示する文字       */
+  color: #78bd78; /* 文字色             */
+  padding: 0em 1.9em 0em 1.5em;
+}
+/* プラグイン設定 > チェックボックスの形状*/
+div.switchArea_new > div.swImg {
+  position: absolute; /* 親要素からの相対位置*/
+  width: 25px; /* 丸の横幅           */
+  height: 25px; /* 丸の高さ           */
+  background: #999999; /* カーソルタブの背景 */
+  top: 6.85em; /* 親要素からの位置   */
+  left: 35.3em; /* 親要素からの位置   */
+  border-radius: 25px; /* 角丸               */
+  transition: 0.2s; /* 滑らか移動       */
+}
+/* プラグイン設定 > チェックボックスの形状 ONのとき*/
+div.switchArea_new input[type="checkbox"]:checked ~ div.swImg {
+  transform: translateX(3.57em); /* 丸も右へ移動       */
+  background: #78bd78; /* カーソルタブの背景 */
+}
+/*------------------------------------------------------------*/
+
+/* フィールド一覧 */
+div#OutputSetting {
+  border: solid 1.5px #8fbccc;
+  background-color: #66cecd;
+}
+
+/*------------------------------------------------------------*/
+
+/* フィールド一覧 > 出力ボタン(ドロップダウン) */
+div#Outputbuttons > div#Category {
+  margin-right: 3em;
+}
+/* フィールド一覧 > 出力ボタン類 */
+div#Outputbuttons > button {
+  position: relative;
+  top: -1.1em;
+  margin-right: 1.5em;
+}
+
+/*------------------------------------------------------------*/
+
+/* フィールド一覧 > 出力内容のチェックボックス類 */
+div#OutputSetting > div:nth-child(n + 1) {
+  float: left;
+}
+div#OutputSetting > div:first-child {
+  float: left;
+}
+div#OutputSetting > div:nth-child(7n) {
+  float: none;
+}
+/* フィールド一覧 > チェックボックス(ラベル)*/
+div#OutputSetting > div > span > label {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------*/
